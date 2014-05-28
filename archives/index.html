@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | Hexo</title>
+  <title>Archives | 让周飞</title>
   <meta name="author" content="让周飞">
   
   <meta name="description" content="叫声飞飞我哈哈笑">
@@ -12,79 +12,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:site_name" content="让周飞"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="alternate" href="/atom.xml" title="让周飞" type="application/atom+xml">
+  <link rel="stylesheet" href="/stylesheets/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/stylesheets/social_foundicons.css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    $('#sidebar').delay(400).animate({ width: '285px' }, 500, function() {
-      $('.personal-info').css({display: 'table'}).hide().fadeIn(500);
-    });
-  });
-  </script>
+  <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-1.8.3.min.js"></script>
   
 </head>
 
 
 <body>
-  <header id="header" class="inner"><!-- <div class="alignleft">
-  <h1><a href="/">Hexo</a></h1>
-  <h2><a href="/"></a></h2>
-</div>
- --><!-- <nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
- --></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignright"><div id="wrapper">
-<h2 class="archive-title">Archives</h2>
+        <script type="text/javascript">
+        /**
+         * 回到页面顶部
+         * @param acceleration 加速度
+         * @param time 时间间隔 (毫秒)
+         **/
+        function goTop(acceleration, time) {
+            acceleration = acceleration || 0.1;
+            time = time || 16;
+
+            var x1 = 0;
+            var y1 = 0;
+            var x2 = 0;
+            var y2 = 0;
+            var x3 = 0;
+            var y3 = 0;
+
+            if (document.documentElement) {
+                x1 = document.documentElement.scrollLeft || 0;
+                y1 = document.documentElement.scrollTop || 0;
+            }
+            if (document.body) {
+                x2 = document.body.scrollLeft || 0;
+                y2 = document.body.scrollTop || 0;
+            }
+            var x3 = window.scrollX || 0;
+            var y3 = window.scrollY || 0;
+
+            // 滚动条到页面顶部的水平距离
+            var x = Math.max(x1, Math.max(x2, x3));
+            // 滚动条到页面顶部的垂直距离
+            var y = Math.max(y1, Math.max(y2, y3));
+
+            // 滚动距离 = 目前距离 / 速度, 因为距离原来越小, 速度是大于 1 的数, 所以滚动距离会越来越小
+            var speed = 1 + acceleration;
+            window.scrollTo(Math.floor(x / speed), Math.floor(y / speed));
+
+            // 如果距离不为零, 继续调用迭代本函数
+            if(x > 0 || y > 0) {
+                var invokeFunction = "goTop(" + acceleration + ", " + time + ")";
+                window.setTimeout(invokeFunction, time);
+            }
+        }
+    </script>
+    <a href="#" onclick="goTop();return false;" class="backTop">▲</a>
+        <header>
+            <div class="wrapper">
+                <div class="center">
+                    <div class="searchBox"></div>
+                    <div class="headerMenu">
+                        <ul>
+                            
+                            <li><a href="/">Home</a></li>
+                            
+                            <li><a href="/archives">Archives</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="socnets">
+                        
+                        
+                        <a href="/atom.xml" alt="rss"><i class="foundicon-rss"></i></a>
+                        
+                        <a href="mailto:frontendme@163.com"><i class="foundicon-chat"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+                        <div class="brand">
+                <div class="wide">
+                    <div class="center">
+                        <h1>
+                            <a href="/">让周飞</a>
+                        </h1>
+                        <p>
+                            叫声飞飞我哈哈笑
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
 
 
   
-    <article class="post">
+    <div class="wide">
+    <div class="center">
+        <div class="head">
+            <div class="timeLine">
+                <time datetime="2014-05-28T05:00:41.000Z" class="date">
+                    <a href="/2014/05/28/hello-world/">May 28 2014</a>
+                </time>
+            </div>
+        </div>
+        
   
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon depth"></div>
-        <time class="depth" datetime="2014-05-28T05:00:41.000Z"><a href="/2014/05/28/hello-world/">May 28 2014</a></time>
-      
-      
-  
-    <h1 class="title depth"><a href="/2014/05/28/hello-world/">Hello World</a></h1>
+    <h2 class="title"><a href="/2014/05/28/hello-world/">Hello World</a></h1>
   
 
-    </header>
-    <div class="entry depth">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank">trobuleshooting</a> or you can ask me on <a href="https://github.com/tommy351/hexo/issues" target="_blank">GitHub</a>.</p>
+        <div class="entry">
+        
+          <p>Welcome to <a href="http://hexo.io/" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank">trobuleshooting</a> or you can ask me on <a href="https://github.com/tommy351/hexo/issues" target="_blank">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2>
 <h3 id="Create_a_new_post">Create a new post</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre>1
@@ -111,82 +159,25 @@
 
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank">Deployment</a></p>
 
-      
+        
+        
+          
+        
+        </div>
     </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
-</div></div>
-    <aside id="sidebar" class="alignleft"><!-- 
-  
-
-  
-
-  
-<div class="widget twitter">
-  <h3 class="title">Tweets</h3>
-  <ul id="tweets"></ul>
 </div>
-
-<script type="text/javascript">
-var twitter_stream = ['thiagopnts', 5, false];
-var moment_js_path = '/js/moment.min.js';
-</script>
-<script src="/js/twitter.js"></script>
-
-
- -->
-<div class="personal-info">
-  <figure>
-    
-      <a href="/">
-        <img class="personal-photo" src="https://avatars1.githubusercontent.com/u/2871503?s=460" alt="让周飞">
-      </a>
-    
-    <figcaption>
-      <h3 class=>让周飞</h3>
-      <p>Something about you here</p>
-    </figcaption>
-  </figure>
-  <section class="social">
-    
-      <a target="_blank" class="icon twitter depth" href="http://twitter.com/thiagopnts"></a>
-    
-    
-      <a target="_blank" class="icon facebook depth" href="http://fb.com/your facebook url"></a> 
-    
-    
-      <a target="_blank" class="icon github depth" href="http://github.com/thiagopnts"></a>
-    
-    
-      <a target="_blank" class="icon email depth" href="mailto:email"></a>
-    
-  </section>
-</div>
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignright depth">
-  <a href="http://github.com/thiagopnts/hexo-persona-dark" style="text-decoration: underline;">Persona Dark Theme</a> 
-  &copy; - 2014 让周飞
+                
   
+
+                  
 </div>
-<div class="clearfix"></div></footer>
+        </div>
+
+  <footer>
+  
+  &copy; 2014 让周飞
+  
+</footer>
   <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
